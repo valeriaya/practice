@@ -1,19 +1,19 @@
-def check(lst)->bool:
-    for a in range(len(lst)):
+def check(list):
+    for a in range(len(list)):
         try:
-            lst[a] = float(lst[a])
+            list[a] = float(list[a])
         except:
             return False
     return True
 
-def sort(lst):
-    for i in range(len(lst)):
+def sort(list):
+    for i in range(len(list)):
         idx_min = i
-        for j in range(i + 1, len(lst)):
-            if lst[j] < lst[idx_min]:
+        for j in range(i + 1, len(list)):
+            if list[j] < list[idx_min]:
                 idx_min = j
         if i != idx_min:
-            lst[i], lst[idx_min] = lst[idx_min], lst[i]
+            list[i], list[idx_min] = list[idx_min], list[i]
 
 
 def binary_search(array, element, left, right):
